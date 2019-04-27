@@ -1,13 +1,9 @@
-# phpspider -- Crawler em PHP                                                           
-=============                                                                                                                                                                                    
-                                                                                                                                                                                                 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master)         
-[![Code Coverage](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master)                         
-                                                                                                                                                                                                 
-[![Latest Stable Version](https://poser.pugx.org/ricardosierra/phpspider/v/stable.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                    
-[![Total Downloads](https://poser.pugx.org/ricardosierra/phpspider/downloads.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                         
-[![Latest Unstable Version](https://poser.pugx.org/ricardosierra/phpspider/v/unstable.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                
-[![License](https://poser.pugx.org/ricardosierra/phpspider/license.png)](https://packagist.org/packages/ricardosierra/phpspider)
+PHPSPIDER
+=============                                                                                                                                                                              
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master)                                                                                                       
+[![Latest Stable Version](https://poser.pugx.org/ricardosierra/phpspider/v/stable.png)](https://packagist.org/packages/ricardosierra/phpspider) [![Total Downloads](https://poser.pugx.org/ricardosierra/phpspider/downloads.png)](https://packagist.org/packages/ricardosierra/phpspider) [![Latest Unstable Version](https://poser.pugx.org/ricardosierra/phpspider/v/unstable.png)](https://packagist.org/packages/ricardosierra/phpspider) [![License](https://poser.pugx.org/ricardosierra/phpspider/license.png)](https://packagist.org/packages/ricardosierra/phpspider)
+
+## Crawler em PHP
 
 "Usei o rastreador para" roubar "um programa que conhece cerca de um milhão de usuários, apenas para provar que o PHP é a melhor linguagem do mundo."
 
@@ -64,14 +60,9 @@ $spider->start();
 ```
 A estrutura geral do rastreador é assim: Primeiro, defina uma matriz $ configs, que define algumas informações sobre o site a ser rastreado e, em seguida, chama-o.```$spider = new phpspider($configs);```E```$spider->start();```Para configurar e iniciar o rastreador.
 
-#### A interface em execução é a seguinte: 
-
-![](http://www.epooll.com/zhihu/pachong.gif)
-
-Para mais detalhes, siga para:
+## For more information
 
 [Documento de desenvolvimento](http://doc.phpspider.org)
-
 
 ## Contributing
 
