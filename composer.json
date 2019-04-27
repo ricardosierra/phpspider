@@ -1,5 +1,5 @@
 {
-    "name": "owner888/phpspider",
+    "name": "ricardosierra/phpspider",
     "type": "library",
     "keywords": [
         "framework", 
@@ -18,10 +18,10 @@
     ],
     "support": {
         "email": "seatle@foxmail.com",
-        "issues": "https://github.com/owner888/phpspider/issues",
+        "issues": "https://github.com/ricardosierra/phpspider/issues",
         "forum": "http://wenda.phpspider.org/",
         "wiki": "http://doc.phpspider.org/",
-        "source": "https://github.com/owner888/phpspider"
+        "source": "https://github.com/ricardosierra/phpspider"
     },
     "require": {
         "php": ">=5.5.0"

@@ -1,15 +1,36 @@
-# phpspider -- PHP蜘蛛爬虫框架
-《我用爬虫一天时间“偷了”知乎一百万用户，只为证明PHP是世界上最好的语言 》所使用的程序  
+# phpspider -- Crawler em PHP                                                           
+=============                                                                                                                                                                                    
+                                                                                                                                                                                                 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master)         
+[![Code Coverage](https://scrutinizer-ci.com/g/ricardosierra/phpspider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ricardosierra/phpspider/?branch=master)                         
+                                                                                                                                                                                                 
+[![Latest Stable Version](https://poser.pugx.org/ricardosierra/phpspider/v/stable.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                    
+[![Total Downloads](https://poser.pugx.org/ricardosierra/phpspider/downloads.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                         
+[![Latest Unstable Version](https://poser.pugx.org/ricardosierra/phpspider/v/unstable.png)](https://packagist.org/packages/ricardosierra/phpspider)                                                
+[![License](https://poser.pugx.org/ricardosierra/phpspider/license.png)](https://packagist.org/packages/ricardosierra/phpspider)
 
-phpspider是一个爬虫开发框架。使用本框架，你不用了解爬虫的底层技术实现，爬虫被网站屏蔽、有些网站需要登录或验证码识别才能爬取等问题。简单几行PHP代码，就可以创建自己的爬虫，利用框架封装的多进程Worker类库，代码更简洁，执行效率更高速度更快。
+"Usei o rastreador para" roubar "um programa que conhece cerca de um milhão de usuários, apenas para provar que o PHP é a melhor linguagem do mundo."
 
-demo目录下有一些特定网站的爬取规则，只要你安装了PHP环境，代码就可以在命令行下直接跑。 对爬虫感兴趣的开发者可以加QQ群一起讨论：147824717。
+O Phpspider é um framework de desenvolvimento de rastreador. Com essa estrutura, você não precisa entender a implementação técnica subjacente dos rastreadores, os rastreadores são bloqueados por sites e alguns sites exigem reconhecimento de código de login ou verificação para rastrear. Com algumas linhas de código PHP, você pode criar seu próprio rastreador, usando a biblioteca de classes Worker multiprocessada empacotada pela estrutura, o código é mais conciso, a eficiência de execução é mais rápida e mais rápida.
 
-下面以糗事百科为例, 来看一下我们的爬虫长什么样子:
+Existem algumas regras de rastreamento para sites específicos no diretório de demonstração, desde que você instale o ambiente PHP, o código pode ser executado diretamente a partir da linha de comando. Desenvolvedores interessados em rastreadores podem se juntar ao grupo QQ para discutir: 147824717.
+
+## Requirements:
+
+ * PHP 7.0+
+ * Composer
+
+## Installation
+
+ You can install this library via Composer: `composer require ricardosierra/phpspider` 
+
+## Examples
+
+Vamos dar uma anedota como exemplo para ver como é o nosso réptil:
 
 ```
 $configs = array(
-    'name' => '糗事百科',
+    'name' => 'Anedota',
     'domains' => array(
         'qiushibaike.com',
         'www.qiushibaike.com'
@@ -25,13 +46,13 @@ $configs = array(
     ),
     'fields' => array(
         array(
-            // 抽取内容页的文章内容
+            // Extraia o conteúdo do artigo na página de conteúdo
             'name' => "article_content",
             'selector' => "//*[@id='single-next-link']",
             'required' => true
         ),
         array(
-            // 抽取内容页的文章作者
+            // Autor do artigo que extraiu a página de conteúdo
             'name' => "article_author",
             'selector' => "//div[contains(@class,'author')]//h2",
             'required' => true
@@ -41,12 +62,21 @@ $configs = array(
 $spider = new phpspider($configs);
 $spider->start();
 ```
-爬虫的整体框架就是这样, 首先定义了一个$configs数组, 里面设置了待爬网站的一些信息, 然后通过调用```$spider = new phpspider($configs);```和```$spider->start();```来配置并启动爬虫.
+A estrutura geral do rastreador é assim: Primeiro, defina uma matriz $ configs, que define algumas informações sobre o site a ser rastreado e, em seguida, chama-o.```$spider = new phpspider($configs);```E```$spider->start();```Para configurar e iniciar o rastreador.
 
-#### 运行界面如下:      
+#### A interface em execução é a seguinte: 
 
 ![](http://www.epooll.com/zhihu/pachong.gif)
 
-更多详细内容，移步到：
+Para mais detalhes, siga para:
 
-[开发文档](http://doc.phpspider.org)
+[Documento de desenvolvimento](http://doc.phpspider.org)
+
+
+## Contributing
+
+For contributing guidelines, please see [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Credits
+
+- Seatle Yang
